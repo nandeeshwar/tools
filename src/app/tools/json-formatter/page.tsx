@@ -85,7 +85,7 @@ export default function JSONFormatter() {
         arrays: 0
       };
 
-      const countElements = (obj: any) => {
+      const countElements = (obj: unknown) => {
         if (Array.isArray(obj)) {
           stats.arrays++;
           obj.forEach(item => countElements(item));
@@ -94,7 +94,7 @@ export default function JSONFormatter() {
           Object.keys(obj).forEach(key => {
             stats.keys++;
             stats.values++;
-            countElements(obj[key]);
+            countElements((obj as Record<string, unknown>)[key]);
           });
         } else {
           stats.values++;

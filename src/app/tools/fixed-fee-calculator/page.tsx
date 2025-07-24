@@ -623,7 +623,7 @@ export default function FixedFeeCalculator() {
                 <strong style={{ color: 'var(--foreground)' }}>Calculation Method:</strong> Uses the exact formulas from the Excel APR_MCA_cost_Simulator.xlsx file.
               </p>
               <p>
-                <strong style={{ color: 'var(--foreground)' }}>APR Calculation:</strong> Implements Excel's RATE function using Newton-Raphson method for precise results.
+                <strong style={{ color: 'var(--foreground)' }}>APR Calculation:</strong> Implements Excel&apos;s RATE function using Newton-Raphson method for precise results.
               </p>
               <p>
                 <strong style={{ color: 'var(--foreground)' }}>Fixed Fee Structure:</strong> Total fees calculated upfront (loan_amount × annual_rate × term/12) and distributed equally over the term.
